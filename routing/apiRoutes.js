@@ -13,6 +13,8 @@ module.exports = function(app) {
 
         var newFriendScore = req.body.scores;
 
+        console.log(req.body);
+
         var lastDiff = 41;
         var friendNum = 0;
 
@@ -37,6 +39,9 @@ module.exports = function(app) {
         console.log("You're best matched gamer-friend is: " + friendsData[friendNum].name);
         console.log("This is a link to their photo: " + friendsData[friendNum].photo)
         console.log("The total difference is: " + lastDiff);
+
+        // THIS SENDS DATA BACK SO THAT IT CAN BE USED CLIENT SIDE...
+        res.send(friendsData[friendNum]);
         
     });
 };
