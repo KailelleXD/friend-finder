@@ -15,6 +15,9 @@
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"> 
     </script>
+
+    <!-- CSS Reset and Stylesheet -->
+    <link rel="stylesheet" type="text/css" href="style.css">
     
 </head>
 <body>
@@ -203,12 +206,40 @@
 
 </div>
 
+<!-- Modal Content -->
+<div class="bg-modal">
+    <div class="modal-content">
+        <div class="close">+</div>
+        <img id="match-img" src="http://www.facetheforce.today/rey/400" alt="Your best matched gamer-friend">
+        <h3>Your best matched gamer-friend!</h3>
+        <h4 id="match-name">REY</h4>
+    </div>
+</div>
+
 <!-- jQuery JavaScript -->
 <script>
 
+    $(".close, #match-name").on("click", function(){
+        $(".bg-modal").css("display", "none");
+
+        $('html, body').css({
+            overflow: 'auto',
+            height: 'auto'
+        }); 
+    });
+
     $("#submit-btn").on("click", function(){
         event.preventDefault();
-        
+
+        $(".bg-modal").css("display", "flex");
+
+        $('html, body').css({
+            overflow: 'hidden',
+            height: '100%'
+        }); 
+
+        window.scrollTo(0,0);
+
         console.log("Submit button has been clicked!");
 
         var userData = {
@@ -230,17 +261,15 @@
 
         console.log(userData);
 
-        $.post("/api/friends", userData, function(data) {
+        
 
+        $.post("/api/friends", userData, function(data) {
         // Take result from POST and display the best match's name and photo (in modal)
         // $("#match-name").text(data.name);
         // $("#match-image").attr("src", data.photo);
-
         });
-        
 
-
-    })
+    });
     
     </script>
 
