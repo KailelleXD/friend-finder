@@ -9,10 +9,10 @@ I wanted to build on my understanding of express specifically in realation to us
 ## Screenshots
 
 __home.html (catch-all page)__
-![gff.png](https://images.zenhubusercontent.com/5bb4428d58d3b92dfedf3084/6375602d-6862-439d-97eb-677b920df505)
+![gff](https://user-images.githubusercontent.com/40282847/49564646-2361be00-f8d9-11e8-9b48-c41e1a27151b.png)
 
 __survey.html__
-![gff2.png](https://images.zenhubusercontent.com/5bb4428d58d3b92dfedf3084/e8da624e-344b-4fcd-acae-a0d805d9058f)
+![gff2](https://user-images.githubusercontent.com/40282847/49564651-265cae80-f8d9-11e8-9efc-1a383d06480b.png)
 
 ## Technologies Used
 
