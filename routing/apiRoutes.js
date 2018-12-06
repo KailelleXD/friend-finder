@@ -11,13 +11,12 @@ module.exports = function(app) {
     // POST route to /api/friends (This is used to handle incoming survey results and compatability logic)
     app.post("/api/friends", function(req, res) {
 
+        var newfriend = req.body;	
         var newFriendScore = req.body.scores;
-
-        console.log(req.body);
 
         var lastDiff = 41;
         var friendNum = 0;
-
+       
         for (var i = 0; i < friendsData.length; i++) {
 
             var totalDiff = 0;
@@ -39,6 +38,9 @@ module.exports = function(app) {
         console.log("You're best matched gamer-friend is: " + friendsData[friendNum].name);
         console.log("This is a link to their photo: " + friendsData[friendNum].photo)
         console.log("The total difference is: " + lastDiff);
+
+        // Push newfriend to the friends array.	
+        friendsData.push(newfriend);
 
         // THIS SENDS DATA BACK SO THAT IT CAN BE USED CLIENT SIDE...
         res.send(friendsData[friendNum]);
