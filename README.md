@@ -25,3 +25,7 @@ __survey.html__
 ## Installation
 
 After cloning to your local machine, run npm install to install the required node packages.
+
+### Hosted on Heroku
+
+[Gamer-Friend Finder](https://afternoon-scrubland-91775.herokuapp.com/)
