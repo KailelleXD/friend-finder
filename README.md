@@ -8,7 +8,10 @@ I wanted to build on my understanding of express specifically in realation to us
 
 ## Screenshots
 
+__home.html (catch-all page)__
 ![gff.png](https://images.zenhubusercontent.com/5bb4428d58d3b92dfedf3084/6375602d-6862-439d-97eb-677b920df505)
+
+__survey.html__
 ![gff2.png](https://images.zenhubusercontent.com/5bb4428d58d3b92dfedf3084/e8da624e-344b-4fcd-acae-a0d805d9058f)
 
 ## Technologies Used
